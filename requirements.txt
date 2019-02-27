@@ -4,14 +4,20 @@
 #
 #    pip-compile 
 #
+aiohttp-jinja2==1.1.0
 aiohttp==3.5.4
+aiopg[sa]==0.16.0
 async-timeout==3.0.1      # via aiohttp
 attrs==18.2.0             # via aiohttp
 chardet==3.0.4            # via aiohttp
 click==7.0                # via pip-tools
 idna==2.8                 # via yarl
+jinja2==2.10              # via aiohttp-jinja2
+markupsafe==1.1.1         # via jinja2
 multidict==4.5.2          # via aiohttp, yarl
 pip-tools==3.4.0
+psycopg2-binary==2.7.7    # via aiopg, sqlalchemy
 pyyaml==3.13
 six==1.12.0               # via pip-tools
+sqlalchemy[postgresql_psycopg2binary]==1.2.18
 yarl==1.3.0               # via aiohttp

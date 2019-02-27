@@ -1,3 +1,6 @@
 aiohttp
+aiohttp_jinja2
+aiopg[sa]
 pip-tools
 pyyaml
+sqlalchemy
