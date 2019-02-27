@@ -1,13 +1,18 @@
+import logging
+
 import aiohttp_jinja2
 import jinja2
 from aiohttp import web
 
 from config.settings import config
+from polls.middlewares import setup_middlewares
 from polls.models import init_pg, close_pg
 from polls.routes import setup_routes
 
+logging.basicConfig(level=logging.DEBUG)
 app = web.Application()
 setup_routes(app)
+setup_middlewares(app)
 app['config'] = config
 
 # setup Jinja2 template renderer
